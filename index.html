@@ -1,0 +1,807 @@
+<!<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Інформаційний туристичний гід по Берну — затишній столиці Швейцарії. Найвідоміші пам'ятки, ведмеді, фонтани та корисні факти.">
+    <title>Берн — затишна столиця Швейцарії: Туристичний гід</title>
+        <style>
+        /* --- Сброс базовых стилей и шрифты --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #f0f4f8;
+            text-align: center;
+        }
+
+        /* --- ШАПКА --- */
+        header {
+            background: linear-gradient(135deg, #d52b1e 0%, #e67e22 50%, #16a085 100%);
+            color: #ffffff;
+            padding: 4rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 4px solid #f1c40f;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.5px;
+        }
+
+        /* --- МЕНЮ --- */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        nav ul li a,
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: #ffffff !important;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 0.7rem 1.6rem;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+
+        nav ul li:nth-child(1) a { background-color: #2980b9 !important; } 
+        nav ul li:nth-child(2) a { background-color: #27ae60 !important; }  
+        nav ul li:nth-child(3) a { background-color: #d35400 !important; } 
+        nav ul li:nth-child(4) a { background-color: #8e44ad !important; }
+
+        nav ul li a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            filter: brightness(1.2) !important;
+        }
+
+        /* --- Контейнер --- */
+        main {
+            max-width: 950px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- Карточки --- */
+        article, section, aside {
+            background: #ffffff;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 3rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-top: 5px solid transparent;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        article:hover, section:hover, aside:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        #about { border-top-color: #d52b1e; }
+        #about h2 { color: #d52b1e; border-bottom-color: #fadbd8; }
+
+        #places { border-top-color: #27ae60; }
+        #places h2 { color: #27ae60; border-bottom-color: #d4efdf; }
+
+        #stats { border-top-color: #2980b9; }
+        #stats h2 { color: #2980b9; border-bottom-color: #d6eaf8; }
+
+        #media { border-top-color: #8e44ad; }
+        #media h2 { color: #8e44ad; border-bottom-color: #ebdef0; }
+
+        h2 {
+            font-size: 1.9rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #f0f0f0;
+            width: 100%;
+        }
+
+        h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            max-width: 750px;
+            color: #52606d;
+        }
+
+        hr {
+            display: none;
+        }
+
+        mark {
+            background-color: #f1c40f;
+            color: #000000;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        blockquote {
+            background-color: #f8fafc;
+            border-left: 5px solid #e67e22;
+            border-right: 5px solid #e67e22;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 650px;
+            border-radius: 8px;
+            color: #627d98;
+        }
+
+        /* --- Списки --- */
+        ol, ul {
+            margin-bottom: 2rem;
+            text-align: left;
+            display: inline-block;
+            max-width: 650px;
+            background: #f8fafc;
+            padding: 1.5rem 2rem 1.5rem 3rem;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
+        }
+
+        ol li::marker { color: #27ae60; font-weight: bold; }
+        ul li::marker { color: #e67e22; }
+
+        /* --- Медиа и Медиафайлы --- */
+        img, iframe, audio {
+            max-width: 100%;
+            border-radius: 12px;
+            margin: 1.5rem auto;
+            display: block;
+        }
+
+        #places img {
+            display: inline-block;
+            width: 48%;
+            margin: 1rem 1%;
+            vertical-align: top;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        article img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 760px;
+            height: 415px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            max-width: 550px;
+        }
+
+        /* --- Таблица --- */
+        table {
+            width: 100%;
+            max-width: 750px;
+            border-collapse: collapse;
+            margin: 2rem auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            border: none;
+        }
+
+        th, td {
+            padding: 1.1rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.05rem;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: #ffffff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background-color: #f8fafc; }
+        tr:hover { background-color: #ebf5fb; }
+
+        /* --- Боковая панель --- */
+        aside {
+            background: linear-gradient(135deg, #e3f2fd 0%, #c8e6c9 100%);
+            border: 1px solid #a5d6a7;
+            border-top: 5px solid #2ecc71;
+        }
+
+        aside h3 {
+            color: #1b5e20;
+            margin-top: 0;
+        }
+
+        /* --- Подвал --- */
+        footer {
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 2.5rem 1rem;
+            margin-top: 5rem;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            border-top: 4px solid #16a085;
+        }
+        /* --- АДАПТАЦИЯ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА (Экраны меньше 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Уменьшаем отступы в шапке и размер заголовка */
+    header {
+        padding: 2.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem; /* Шрифт станет компактнее */
+        margin-bottom: 1.5rem;
+    }
+
+    /* 2. Перестраиваем меню в вертикальный список */
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    nav ul li a {
+        display: block; /* Кнопки растянутся на всю ширину для удобства нажатия пальцем */
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    /* 3. Уменьшаем внутренние отступы у карточек, чтобы освободить место для контента */
+    article, section, aside {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* 4. Разворачиваем картинки в секции #places на всю ширину (одна под другой) */
+    #places img {
+        display: block;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    /* 5. Делаем таблицы скроллируемыми, чтобы они не вылезали за экран */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Появится аккуратная горизонтальная прокрутка только для таблицы */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    th, td {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* 6. Адаптируем видео (Iframe) */
+    iframe {
+        height: 250px; /* Уменьшаем высоту видео, чтобы оно не занимало весь экран */
+    }
+    
+    /* 7. Списки делаем более компактными */
+    ol, ul {
+        padding: 1.5rem 1rem 1.5rem 2rem;
+    }
+}
+/* --- СТИЛІ ДЛЯ ЧЕТВЕРТОЇ ПРАКТИЧНОЇ (КНОПКА ТА МЕНЮ) --- */
+
+/* 1. Стилі кнопки для комп'ютерів (за замовчуванням прихована) */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+    margin-bottom: 1rem;
+}
+
+.menu-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff; /* Білі смужки на червоно-зеленому фоні шапки */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Анімація перетворення смужок на хрестик при кліку */
+.menu-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.menu-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* 2. Адаптація під мобільні екрани (менше 768px) */
+@media screen and (max-width: 768px) {
+    /* Показуємо кнопку гамбургера на телефонах */
+    .menu-btn {
+        display: flex;
+    }
+
+    /* Перетворюємо меню на компактну вертикальну панель */
+    nav ul {
+        display: none; /* Спочатку ховаємо меню */
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        background: rgba(0, 0, 0, 0.2); /* Напівпрозорий темний фон */
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    /* Цей клас увімкне JavaScript, коли ти клацнеш кружечком на кнопку */
+    nav ul.show {
+        display: flex;
+    }
+
+    /* Робимо посилання всередині меню широкими та зручними для натискання пальцем */
+    nav ul li a,
+    nav ul li a:link,
+    nav ul li a:visited {
+        display: block;
+        width: 100%;
+        padding: 0.6rem 1rem;
+    }
+}
+        /* --- СТИЛІ ДЛЯ ПРАКТИЧНОЇ №5 (ФОРМА ТА ВАЛІДАЦІЯ) --- */
+        #booking {
+            border-top-color: #e67e22;
+        }
+        #booking h2 {
+            color: #e67e22;
+            border-bottom-color: #fdebd0;
+        }
+        #tourForm {
+            width: 100%;
+            max-width: 500px;
+            margin: 1.5rem auto;
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #34495e;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 2px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #e67e22;
+        }
+        /* Стиль для полів з помилкою */
+        .form-group input.invalid {
+            border-color: #e74c3c;
+            background-color: #fdf2f2;
+        }
+        /* Текст помилки (за замовчуванням прихований) */
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            display: none;
+            margin-top: 0.3rem;
+            font-weight: 500;
+        }
+        /* Кнопка відправки */
+        .submit-btn {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 25px;
+            width: 100%;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.3);
+            transition: all 0.2s ease;
+        }
+        .submit-btn:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(230, 126, 34, 0.4);
+        }
+        
+        /* МОДАЛЬНЕ ВІКНО */
+        .modal {
+            display: none; /* Приховане */
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.3s ease;
+        }
+        .close-btn {
+            background: #27ae60;
+            color: white;
+            border: none;
+            padding: 0.6rem 2rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+
+</head>
+<body>
+
+   <header>
+    <h1>Берн — затишна столиця Швейцарії</h1>
+    
+    <nav>
+        <!-- КНОПКА ГАМБУРГЕРА (Додано для Практичної №4) -->
+        <button class="menu-btn" id="menuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Твій список навігації, якому додано id="navList" -->
+        <ul id="navList">
+            <li><a href="#about">Про місто</a></li>
+            <li><a href="#places">Пам'ятки</a></li>
+            <li><a href="#stats">Статистика</a></li>
+            <li><a href="#media">Медіа</a></li>
+            <li><a href="#booking" style="background-color: #e67e22 !important;">Тур</a></li>
+
+        </ul>
+    </nav>
+</header>
+
+
+    <main>
+        <!-- Стаття з описом та акцентами у тексті -->
+        <article id="about">
+            <h2>Серце Швейцарської Конфедерації</h2>
+            <p><strong>Берн</strong> &mdash; унікальне місто, яке є фактичною столицею Швейцарії. Засноване наприкінці дванадцятого століття на півострові, що омивається бірюзовою річкою Ааре, воно зуміло зберегти свій середньовічний шарм. Сьогодні Берн гармонійно поєднує статус політичного центру країни із неквапливим, спокійним ритмом життя.</p>
+            
+            <p>Прогулюючись старим містом, ви неодмінно звернете увагу на довгі кам'яні навіси. Протяжність цих <em>знаменитих торгових арок</em> становить близько шести кілометрів, що робить їх однією з найдовших критих купівельних зон у Європі. Вони дозволяють комфортно гуляти та купувати сувеніри навіть під час сильного дощу.</p>
+            
+            <p>Важливо знати, що <mark>все Старе місто Берна внесене до Списку всесвітньої спадщини ЮНЕСКО</mark>. Його старовинні вулочки, унікальні фонтани-свердловини XVI століття та велична архітектура з пісковика залишаються незмінними вже протягом багатьох століть.</p>
+            
+            <blockquote>
+                &laquo;Берн не намагається вразити хмарочосами, він підкорює мандрівників своєю гармонією з природою та повагою до власної історії.&raquo;
+            </blockquote>
+
+            <!-- Зображення 1 — Глобальне відкрите посилання -->
+            <img src="images (1).jpg" alt="Панорамний вид на Старе місто Берн та річку Ааре" width="800" height="500">
+        </article>
+
+        <hr>
+
+        <!-- Списки (Нумерований та Ненумерований) -->
+        <section id="places">
+            <h2>Найвизначніші місця, які варто відвідати</h2>
+            <p>Ми підготували послідовний маршрут для вашої ідеальної прогулянки столицею:</p>
+            
+            <ol>
+                <li>Цітглогге (Zytglogge) &mdash; середньовічна годинникова вежа з рухомими фігурками, що виступають щогодини.</li>
+                <li>Бернський собор (Мюнстер) &mdash; найвищий християнський храм Швейцарії з неймовірним панорамним майданчиком.</li>
+                <li>Ведмежа яма (Беренпарк) &mdash; великий парк на схилі річки, де живуть справжні symbols міста &mdash; бурі ведмеді.</li>
+                <li>Федеральний палац (Бундесгаус) &mdash; велична будівля парламенту, перед якою влітку б'ють 26 фонтанів.</li>
+            </ol>
+
+            <h3>Що обов'язково треба спробувати або купити в Берні:</h3>
+            <ul>
+                <li>Традиційне швейцарське сирне фондю або раклет.</li>
+                <li>Ароматні бернські медові пряники із зображенням ведмедика.</li>
+                <li>Справжній швейцарський шоколад відомих світових брендів &reg;.</li>
+            </ul>
+
+             <div class="places-gallery">
+        <!-- 2. Всередину вставляємо ваші картинки -->
+        <img src="images (1).jpg" alt="Пам'ятка 1">
+        <img src="images (2).jpg" alt="Пам'ятка 2">
+        <img src="images (3).jpg" alt="Пам'ятка 3">
+        <img src="images(4).jpg" alt="Пам'ятка 4">
+    </div>
+</section>
+
+        <hr>
+
+        <!-- Таблиця з інформацією -->
+        <section id="stats">
+            <h2>Корисна інформація для туристів</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Параметр / Характеристика</th>
+                        <th>Значення для мандрівника</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Офіційна валюта</td>
+                        <td>Швейцарський франк (CHF), але в багатьох місцях приймають і євро &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Мова спілкування</td>
+                        <td>Німецька (бернський діалект), проте персонал усюди чудово володіє англійською</td>
+                    </tr>
+                    <tr>
+                        <td>Головна особливість</td>
+                        <td>Понад 100 історичних фонтанів, з яких тече чиста питна джерельна вода</td>
+                    </tr>
+                    <tr>
+                        <td>Міський транспорт</td>
+                        <td>Трамваї та автобуси (туристам у готелях видають безкоштовний Bern Ticket)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- Медіаконтент та Iframe -->
+        <section id="media">
+            <h2>Медіагалерея швейцарської столиці</h2>
+            
+            <h3>Відеоекскурсія Берном:</h3>
+            <!-- Офіційне YouTube відео про Берн, повністю сумісне з локальним запуском -->
+            <iframe width="760" height="415" 
+                src="https://www.youtube.com/embed/7j6gWd2gWHM" 
+                title="Берн, Швейцарія — Туристичне відео" 
+                style="border: 0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+
+            <h3>Аудіоатмосфера (Музичний трек):</h3>
+            <p>Прослухайте приємну мелодію під час ознайомлення з матеріалом:</p>
+            <!-- Використано пряме MP3 посилання з іншого стабільного CDN джерела, щоб уникнути проблем із локальним програванням .ogg -->
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Ваш browser не підтримує аудіо-елемент.
+            </audio>
+
+            <h3>Берн на карті Google Maps:</h3>
+            <!-- Автономна інтерактивна карта Берна -->
+            <iframe 
+                src="https://maps.google.com/maps?q=Bern,Switzerland&t=m&z=12&output=embed&iwloc=near"  
+                width="500" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>S
+        </section>
+
+        <!-- Бічна панель із додатковою інформацією -->
+        <aside>
+            <h3>Порада для економії</h3>
+            <p>Не купуйте питну воду в пляшках! Вода у всіх фонтанах Берна (якщо на них немає спеціального попереджувального знака) є абсолютно чистою, прохолодною та придатною для пиття. Просто беріть із собою багаторазову пляшечку.</p>
+        </aside>
+                <!-- НОВА СЕКЦІЯ ДЛЯ ПРАКТИЧНОЇ №5: БРОНЮВАННЯ ТУРУ -->
+        <section id="booking">
+            <h2>Замовити екскурсію по Берну</h2>
+            <p>Заповніть форму, і наш гід зв'яжеться з вами для уточнення деталей подорожі.</p>
+            
+            <form id="tourForm" novalidate>
+                <div class="form-group">
+                    <label for="userName">Ваше ім'я:</label>
+                    <input type="text" id="userName" placeholder="Введіть ім'я">
+                    <span class="error-message" id="nameError">Ім'я має містити не менше 2 символів</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="userEmail">Електронна пошта:</label>
+                    <input type="email" id="userEmail" placeholder="example@mail.com">
+                    <span class="error-message" id="emailError">Введіть коректну адресу пошти з @</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tourDate">Дата екскурсії:</label>
+                    <input type="date" id="tourDate">
+                    <span class="error-message" id="dateError">Не можна обрати минулу дату</span>
+                </div>
+
+                <button type="submit" class="submit-btn">Забронювати тур</button>
+            </form>
+
+            <!-- Модальне вікно успіху (спочатку приховане) -->
+            <div id="successModal" class="modal">
+                <div class="modal-content">
+                    <h3>🎉 Успішно!</h3>
+                    <p>Дякуємо! Вашу заявку на подорож до Берна прийнято. Гід відповість вам найближчим часом.</p>
+                    <button id="closeModalBtn" class="close-btn">Чудово</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Закотей Ілля. Всі права захищено &reg;.</p>
+    </footer>
+    <!-- Звідси починається код 4-ї практичної роботи (JavaScript) -->
+    <script>
+        // Знаходимо елементи кнопки та списку меню за їх ID
+        const menuBtn = document.getElementById('menuBtn');
+        const navList = document.getElementById('navList');
+
+        // Додаємо подію кліку на кнопку
+        menuBtn.addEventListener('click', () => {
+            // Перемикаємо клас 'show' для списку (відкрити/закрити меню)
+            navList.classList.toggle('show');
+            // Перемикаємо клас 'open' для кнопки (анімація перетворення на хрестик)
+            menuBtn.classList.toggle('open');
+        });
+
+        // Додатково: закриваємо меню, якщо користувач клікнув на будь-яке посилання
+        const menuLinks = document.querySelectorAll('nav ul li a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('show');
+                menuBtn.classList.remove('open');
+            });
+        });
+                // --- ВАЛІДАЦІЯ ФОРМИ (ПРАКТИЧНА №5) ---
+        const tourForm = document.getElementById('tourForm');
+        const successModal = document.getElementById('successModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        // Встановлюємо мінімальну дату для вибору — сьогоднішній день
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('tourDate').min = today;
+
+        tourForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // Зупиняємо стандартне перезавантаження сторінки
+            
+            let isValid = true;
+
+            // 1. Валідація імені
+            const nameInput = document.getElementById('userName');
+            const nameError = document.getElementById('nameError');
+            if (nameInput.value.trim().length < 2) {
+                nameInput.classList.add('invalid');
+                nameError.style.display = 'block';
+                isValid = false;
+            } else {
+                nameInput.classList.remove('invalid');
+                nameError.style.display = 'none';
+            }
+
+            // 2. Валідація Email за допомогою регулярного виразу
+            const emailInput = document.getElementById('userEmail');
+            const emailError = document.getElementById('emailError');
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailInput.classList.add('invalid');
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailInput.classList.remove('invalid');
+                emailError.style.display = 'none';
+            }
+
+            // 3. Валідація дати
+            const dateInput = document.getElementById('tourDate');
+            const dateError = document.getElementById('dateError');
+            if (!dateInput.value) {
+                dateInput.classList.add('invalid');
+                dateError.style.display = 'block';
+                isValid = false;
+            } else {
+                dateInput.classList.remove('invalid');
+                dateError.style.display = 'none';
+            }
+
+            // Якщо всі поля заповнені правильно — показуємо вікно успіху
+            if (isValid) {
+                successModal.style.display = 'flex';
+                tourForm.reset(); // Очищаємо поля форми
+            }
+        });
+
+        // Закриття модального вікна при кліку на кнопку
+        closeModalBtn.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+
+    </script>
+
+
+</body>
+</html>
